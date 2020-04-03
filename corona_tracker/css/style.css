@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans|Merienda|Open+Sans&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.6rem;
+  background-color: #0432af; /* #182c61 */
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 2rem;
+  margin: auto;
+  overflow: hidden;
+}
+
+/* Navigation*/
+
+#nav .logo {
+  font-size: 2.5rem;
+  color: #fff;
+}
+
+#nav .container {
+  max-width: 1100px;
+  padding: 2rem;
+}
+
+.navbar {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+#tracker {
+  width: 50%;
+  height: 35px;
+  font-size: 1rem;
+  justify-self: end;
+  border-radius: 5px;
+}
+
+/* total count boxes */
+#box {
+  max-width: 1100px;
+  margin: 20px;
+  margin-top: 70px;
+}
+#box .box-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 1rem;
+  align-content: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-content: center;
+  /* background: #fff; */
+  padding: 2.5rem;
+  border-radius: 15px;
+  margin: 0 30px;
+  box-shadow: 0 0 10px #000000; /* 5px 8px 6px -6px black; */
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.card h4 {
+  font-size: 1.4rem;
+}
+
+.card h4:first-child {
+  margin-bottom: 1.5rem;
+}
+
+.card p {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 4rem;
+}
+
+.card #total-confirm {
+  color: #01a3a4;
+}
+
+.card #total-recover {
+  color: #20bf6b;
+}
+
+.card #total-deaths {
+  color: #01a3a4;
+}
+
+.card #recovery-rate {
+  color: #20bf6b;
+}
+
+.card #death-rate {
+  color: #01a3a4;
+}
+
+.card #recovery-rate,
+#death-rate {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 2rem;
+}
+
+/* statistics */
+
+#content {
+  margin-top: 40px;
+}
+
+.stat-container {
+  max-width: 1200px;
+  padding: 2rem 3rem;
+  margin: auto;
+  box-shadow: 0 0 10px #000000;
+}
+
+.stat-container h3 {
+  font-size: 2rem;
+}
+
+.table {
+  overflow-x: auto;
+}
+
+table {
+  margin-top: 30px;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #000;
+  color: #ddd;
+}
+
+th {
+  font-size: 1.2rem;
+  color: #000;
+}
+
+tr:hover {
+  background-color: #34477a;
+}
+
+#search {
+  border: none;
+  border-bottom: 1px solid #000;
+  width: 40%;
+  height: 40px;
+  margin-top: 30px;
+  background: transparent;
+  font-size: 1rem;
+  color: #fff;
+}
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+}
+
+#errmsg {
+  color: red;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* media queries */
+
+@media (max-width: 786px) {
+  #box {
+    max-width: 600px;
+    margin: auto;
+  }
+  #box .box-container {
+    grid-template-columns: 1fr;
+  }
+
+  .navbar {
+    grid-template-columns: 1fr;
+  }
+
+  #tracker {
+    margin-top: 20px;
+    justify-self: start;
+  }
+
+  .card #recovery-rate {
+    line-height: 1.5;
+  }
+  .card h4:first-child {
+    margin-bottom: 0.7rem;
+  }
+
+  #search {
+    width: 70%;
+  }
+  .stat-container {
+    margin: 0 20px;
+  }
+}
